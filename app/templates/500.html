@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ _('Beklenmeyen bir hata oluştu') }}</h1>
+    <p>{{ _('Yöneticiye bilgi verildi. Rahatsızlıktan dolayı özür dileriz!') }}</p>
+    <p><a href="{{ url_for('index') }}">{{ _('Geri Dön') }}</a></p>
+{% endblock %}

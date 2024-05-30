@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import "bootstrap_wtf.html" as wtf %}
+
+{% block content %}
+    <h1>{{ _('Giriş Yap') }}</h1>
+    {{ wtf.quick_form(form) }}
+    <p>{{ _('Üye olmak ister misin?') }} <a href="{{ url_for('register') }}">{{ _('Üye ol!') }}</a></p>
+    <p>
+        {{ _('Şifreni mi unuttun?') }}
+        <a href="{{ url_for('reset_password_request') }}">{{ _('Şifremi sıfırla') }}</a>
+    </p>
+{% endblock %}
