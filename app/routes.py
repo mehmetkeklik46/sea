@@ -172,6 +172,15 @@ def edit_profile():
     return render_template('edit_profile.html', title=_('Bilgilerimizi Güncelle'),
                            form=form)
 
+#Sil
+@app.route("/delete/<string:id>")
+def deletePost(id):
+    post=Post.query.filter_by(id=id).first()
+    db.session.delete(post)
+    db.session.commit()
+    flash("Gönderi silindi.", "danger")
+    return redirect(url_for('index'))
+
 
 @app.route('/follow/<username>', methods=['POST'])
 @login_required

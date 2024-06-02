@@ -8,6 +8,22 @@
     {% else %}
     <title>{{ _('Sosyal Eğitim Ağına Hoşgeldin') }}</title>
     {% endif %}
+    <script src="https://cdn.tiny.cloud/1/6p0erzsoc4dm7eldf45mlb3opbjttid0vr6ej9glr89i92pt/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+  tinymce.init({
+    selector: 'textarea#post',
+    height: 150,
+    skin: 'bootstrap',
+    plugins: 'lists, link, image, media',
+    toolbar: 'bold italic numlist link',
+    menubar: false,
+  });
+</script>
+    <script>
+      tinymce.init({
+        selector: 'textarea#post'
+      });
+    </script>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         rel="stylesheet"

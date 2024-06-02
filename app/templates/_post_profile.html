@@ -16,6 +16,9 @@
                 <br>
                 <span id="post{{ post.id }}">{{ post.body }}</span>
                 <br>
+                {% if user == current_user or current_user.username=="mehmetkeklik" %}
+                    <a href="/delete/{{ post.id }}">Sil</a>
+                {% endif %}
 
             </td>
         </tr>
